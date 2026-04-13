@@ -1,0 +1,4 @@
+
+> @agent-loom/payment@0.1.0 lint /Users/apple/agent_loom/packages/payment
+> eslint src --ext .ts
+

@@ -1,0 +1,10 @@
+name = "stellar-trending"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+# stellar-base uses Node-style APIs in places; safe for Workers with this flag.
+compatibility_flags = ["nodejs_compat"]
+
+# Optional: JSON array of { "rank", "contract", "symbol" } for mainnet or custom rankings.
+# For production, set in the Cloudflare dashboard or use `wrangler secret` / vars.
+# [vars]
+# TRENDING_JSON = "[{\"rank\":1,\"symbol\":\"USDC\",\"contract\":\"C...\"}]"

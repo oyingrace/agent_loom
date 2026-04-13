@@ -1,0 +1,21 @@
+[package]
+name = "loom-session"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Minimal Soroban policy contract: owner configures relayer + spend limits; relayer invokes relay_execute."
+
+[lib]
+crate-type = ["cdylib", "lib"]
+doctest = false
+
+[dependencies]
+# Pin minor series so `cargo test` works on stable toolchains without edition2024-only deps.
+soroban-sdk = "=21.7.6"
+time-core = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { version = "=21.7.6", features = ["testutils"] }
+
+[package.metadata.stellar]
+cargo-feat = ["soroban-env-host/testutils"]

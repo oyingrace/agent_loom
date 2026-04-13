@@ -1,0 +1,4 @@
+
+> @agent-loom/mcp-server@0.1.0 lint /Users/apple/agent_loom/apps/mcp-server
+> eslint src --ext .ts
+

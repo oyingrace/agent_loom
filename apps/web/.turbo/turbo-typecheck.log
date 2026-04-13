@@ -1,0 +1,22 @@
+
+> @agent-loom/web@0.1.0 typecheck /Users/apple/agent_loom/apps/web
+> tsc --noEmit
+
+app/api/auth/session/route.ts(2,19): error TS2307: Cannot find module 'zod' or its corresponding type declarations.
+app/api/auth/session/route.ts(50,13): error TS18048: 'user' is possibly 'undefined'.
+app/api/auth/session/route.ts(51,25): error TS18048: 'user' is possibly 'undefined'.
+app/api/oauth/register/route.ts(3,25): error TS2307: Cannot find module 'bcrypt' or its corresponding type declarations.
+app/api/oauth/register/route.ts(4,20): error TS2307: Cannot find module 'drizzle-orm' or its corresponding type declarations.
+app/api/oauth/register/route.ts(42,20): error TS2322: Type 'string | undefined' is not assignable to type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+app/api/oauth/token/route.ts(2,25): error TS2307: Cannot find module 'bcrypt' or its corresponding type declarations.
+app/api/oauth/token/route.ts(3,20): error TS2307: Cannot find module 'drizzle-orm' or its corresponding type declarations.
+lib/auth/oauth.ts(2,37): error TS2307: Cannot find module 'drizzle-orm' or its corresponding type declarations.
+lib/auth/session.ts(1,53): error TS2307: Cannot find module 'iron-session' or its corresponding type declarations.
+lib/auth/session.ts(3,20): error TS2307: Cannot find module 'drizzle-orm' or its corresponding type declarations.
+lib/auth/session.ts(85,20): error TS18048: 'user' is possibly 'undefined'.
+lib/redis/client.ts(1,19): error TS2307: Cannot find module 'ioredis' or its corresponding type declarations.
+lib/redis/client.ts(10,21): error TS7006: Parameter 'times' implicitly has an 'any' type.
+lib/redis/client.ts(16,27): error TS7006: Parameter 'err' implicitly has an 'any' type.
+lib/repositories/base.ts(1,24): error TS2307: Cannot find module 'ioredis' or its corresponding type declarations.
+ ELIFECYCLE  Command failed with exit code 2.

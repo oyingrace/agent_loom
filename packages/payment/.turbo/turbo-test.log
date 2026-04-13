@@ -1,0 +1,12 @@
+
+> @agent-loom/payment@0.1.0 test /Users/apple/agent_loom/packages/payment
+> vitest run --passWithNoTests
+
+
+ RUN  v4.1.2 /Users/apple/agent_loom/packages/payment
+
+No test files found, exiting with code 0
+
+include: **/*.{test,spec}.?(c|m)[jt]s?(x)
+exclude:  **/node_modules/**, **/.git/**
+

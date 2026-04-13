@@ -1,0 +1,4 @@
+
+> @agent-loom/mcp-server@0.1.0 typecheck /Users/apple/agent_loom/apps/mcp-server
+> tsc --noEmit
+

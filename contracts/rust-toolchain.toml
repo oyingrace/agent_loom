@@ -1,0 +1,5 @@
+[toolchain]
+# Recent crates.io releases use `edition = "2024"` in their Cargo.toml; older Cargo
+# cannot parse them. Use 1.85+ (or current stable) so `cargo test` / `cargo build` work.
+channel = "1.85"
+profile = "minimal"

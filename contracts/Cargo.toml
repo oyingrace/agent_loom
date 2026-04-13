@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = ["loom-session"]
+
+# Required by `stellar contract build` for Soroban (prevents silent integer overflow in release).
+[profile.release]
+overflow-checks = true
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/agent-loom/agent-loom"
+
+# Unify transitive `time-core` — 0.1.8+ may require Cargo `edition2024` support.
+[workspace.dependencies]
+time-core = "=0.1.7"
+

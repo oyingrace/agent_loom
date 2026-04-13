@@ -1,0 +1,33 @@
+{
+  "name": "agent-loom",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Stellar-native agent fabric monorepo",
+  "packageManager": "pnpm@10.2.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel --filter \"./apps/*\" --filter \"./packages/*\" dev",
+    "build": "pnpm -r --filter \"./apps/*\" --filter \"./packages/*\" build",
+    "lint": "pnpm -r --filter \"./apps/*\" --filter \"./packages/*\" lint",
+    "typecheck": "pnpm -r --filter \"./apps/*\" --filter \"./packages/*\" typecheck",
+    "test": "pnpm -r --filter \"./apps/*\" --filter \"./packages/*\" test",
+    "turbo:lint": "turbo run lint",
+    "turbo:typecheck": "turbo run typecheck",
+    "turbo:test": "turbo run test",
+    "contracts:test": "cargo test --manifest-path contracts/Cargo.toml -p loom-session",
+    "contracts:build:wasm": "stellar contract build --manifest-path contracts/Cargo.toml --package loom-session --optimize"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "tailwindcss": "^4.2.2",
+    "turbo": "latest",
+    "typescript": "latest",
+    "eslint": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "vitest": "latest",
+    "tsx": "latest",
+    "@types/node": "latest"
+  }
+}

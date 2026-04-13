@@ -1,0 +1,4 @@
+
+> @agent-loom/contracts@0.1.0 typecheck /Users/apple/agent_loom/packages/contracts
+> tsc --noEmit
+
