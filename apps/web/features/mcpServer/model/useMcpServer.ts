@@ -386,8 +386,11 @@ export function useMcpServer() {
 
   const copyConnectionUrl = useCallback(() => {
     if (!server) return;
+    const raw = process.env.NEXT_PUBLIC_MCP_URL?.trim();
+    const fromEnv = raw ? raw.replace(/\/$/, "") : "";
     const base =
-      typeof window !== "undefined" ? window.location.origin : "";
+      fromEnv ||
+      (typeof window !== "undefined" ? window.location.origin : "");
     const url = `${base}/mcp/${server.slug}`;
     void navigator.clipboard.writeText(url);
     setCopied(true);

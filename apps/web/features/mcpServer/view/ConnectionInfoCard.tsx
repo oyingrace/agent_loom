@@ -17,15 +17,28 @@ type Props = {
   onCopy: () => void;
 };
 
+function mcpBaseUrl(): string {
+  const raw = process.env.NEXT_PUBLIC_MCP_URL?.trim();
+  const fromEnv = raw ? raw.replace(/\/$/, "") : "";
+  if (fromEnv) return fromEnv;
+  if (typeof window !== "undefined") return window.location.origin;
+  return "";
+}
+
 export function ConnectionInfoCard({ serverSlug, copied, onCopy }: Props) {
-  const base = typeof window !== "undefined" ? window.location.origin : "";
-  const endpointUrl = `${base}/mcp/${serverSlug}`;
+  const endpointUrl = `${mcpBaseUrl()}/mcp/${serverSlug}`;
 
   return (
     <Card>
       <CardHeader>
         <CardTitle>Connection info</CardTitle>
-        <CardDescription>MCP endpoint URL for clients</CardDescription>
+        <CardDescription>
+          MCP endpoint URL for clients (must be your{" "}
+          <strong>MCP host</strong>, e.g. Render — not the Vercel web app unless MCP is
+          served there). Set{" "}
+          <code className="bg-muted rounded px-1 text-xs">NEXT_PUBLIC_MCP_URL</code> on
+          Vercel.
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-2">
